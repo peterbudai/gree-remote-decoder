@@ -1,0 +1,22 @@
+esphome:
+  name: gree-remote-capture
+  friendly_name: gree-remote-capture
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+logger:
+
+remote_receiver:
+  pin:
+    number: GPIO22
+    inverted: true
+    mode:
+      input: true
+      pullup: true
+  tolerance: 50%
+  idle: 25ms
+  dump:
+    - raw
