@@ -1,4 +1,8 @@
 #!/bin/env python3
+# -------------------------------------------------------------------------------------------
+# Decode GREE YAP1F remote control protocol via ESPHome remote_receiver component logs.
+# For usage instructions, see comments below.
+# -------------------------------------------------------------------------------------------
 
 from enum import Enum, IntEnum
 import fileinput
@@ -509,11 +513,11 @@ def next_data(bytes: list[int]):
 #
 # For processing live log stream:
 #
-#   $ esphome logs irtest.yaml | python raw2bin.py
+#   $ esphome logs capture.yaml | python decode.py
 #
 # For processing a saved log file:
 #
-#   $ python raw2bin.py log.txt
+#   $ python decode.py log.txt
 # -------------------------------------------------------------------------------------------
 
 if __name__ == "__main__":
